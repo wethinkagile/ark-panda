@@ -1,0 +1,9 @@
+{
+  "cssFramework": "panda",
+  "jsFramework": "react",
+  "importAliases": {
+    "components": "~/lib/components/ui",
+    "utils": "~/lib/styles"
+  },
+  "useReactServerComponents": true
+}

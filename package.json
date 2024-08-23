@@ -1,0 +1,53 @@
+{
+  "name": "nextarter-park",
+  "private": true,
+  "scripts": {
+    "dev": "rm -rf .next && next dev",
+    "park-ui:add-component": "pnpm dlx @park-ui/cli add",
+    "build": "next build",
+    "turbo": "pnpm dlx turbo@2.0.9",
+    "build:turbo": "pnpm turbo build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "start": "next start",
+    "lint": "pnpm biome lint ./src",
+    "biome:write": "pnpm biome check --write ./src",
+    "type-check": "tsc --noEmit",
+    "check:turbo": "pnpm turbo lint type-check",
+    "up-interactive": "pnpm up -i",
+    "up-latest": "pnpm up-interactive -L",
+    "release": "standard-version",
+    "push-release": "git push --follow-tags origin main",
+    "prepare": "panda codegen && husky"
+  },
+  "dependencies": {
+    "@ark-ui/react": "^3.3.0",
+    "@park-ui/panda-preset": "^0.38.0",
+    "@theme-toggles/react": "^4.1.0",
+    "lucide-react": "^0.394.0",
+    "next": "^14.2.4",
+    "next-pwa": "^5.6.0",
+    "next-seo": "^6.5.0",
+    "next-themes": "^0.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.1",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@pandacss/dev": "^0.40.1",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "husky": "^9.0.11",
+    "knip": "^5.19.0",
+    "lint-staged": "^15.2.7",
+    "next-sitemap": "^4.2.3",
+    "standard-version": "^9.5.0",
+    "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": ">=20.14.x",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.1.2"
+}
